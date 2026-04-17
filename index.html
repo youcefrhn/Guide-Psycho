@@ -3,176 +3,281 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مذكرة علم النفس التربوي الشاملة</title>
+    <title>المنصة المتكاملة لعلم النفس القرآني</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;500;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-green: #1b4d3e;
-            --gold: #d4af37;
-            --soft-white: #fdfcf9;
-            --deep-blue: #2c3e50;
+            --primary: #1b4d3e;
+            --secondary: #d4af37;
+            --bg-light: #fdfcf9;
+            --text-main: #2c3e50;
+            --accent-green: #2ecc71;
         }
 
         body {
             font-family: 'Tajawal', sans-serif;
-            background-color: #f4f1ea;
-            color: #333;
+            background-color: #f5f5f5;
+            color: var(--text-main);
             margin: 0;
             line-height: 1.8;
         }
 
         header {
-            background: linear-gradient(135deg, var(--primary-green), #2e7d32);
+            background: linear-gradient(rgba(27, 77, 62, 0.9), rgba(27, 77, 62, 0.9)), url('https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
             color: white;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
-            border-bottom: 8px solid var(--gold);
+            border-bottom: 8px solid var(--secondary);
         }
 
         .container {
-            max-width: 1100px;
-            margin: -40px auto 40px;
+            max-width: 1200px;
+            margin: -50px auto 50px;
             padding: 0 20px;
         }
 
         .card {
             background: white;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-top: 5px solid var(--gold);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
         }
 
         h2 {
-            color: var(--primary-green);
             font-family: 'Amiri', serif;
-            font-size: 1.8em;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
+            color: var(--primary);
+            font-size: 2.2em;
+            border-right: 6px solid var(--secondary);
+            padding-right: 15px;
+            margin-bottom: 25px;
         }
 
-        .grid {
+        .section-title {
+            color: var(--secondary);
+            font-weight: 800;
+            display: block;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            gap: 25px;
         }
 
-        .feature-box {
-            background: #fcfbf7;
-            padding: 20px;
-            border-right: 4px solid var(--primary-green);
-            border-radius: 4px;
+        .info-box {
+            background: #f9fbf9;
+            border: 1px solid #e1e8e1;
+            padding: 25px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
         }
 
-        .badge {
-            background: var(--primary-green);
+        .info-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-box h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+
+        .stat-badge {
+            background: var(--accent-green);
             color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.85em;
-            margin-left: 5px;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
+        ul.pro-list {
+            list-style: none;
+            padding: 0;
         }
 
-        th, td {
-            padding: 15px;
-            border: 1px solid #eee;
-            text-align: right;
+        ul.pro-list li {
+            position: relative;
+            padding-right: 30px;
+            margin-bottom: 12px;
         }
 
-        th { background: #f8f9fa; color: var(--primary-green); }
+        ul.pro-list li::before {
+            content: "✓";
+            position: absolute;
+            right: 0;
+            color: var(--accent-green);
+            font-weight: bold;
+        }
 
         footer {
-            background: var(--deep-blue);
+            background: var(--primary);
             color: white;
             text-align: center;
-            padding: 40px;
+            padding: 50px 20px;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>موسوعة علم النفس التربوي في حلقات القرآن</h1>
-    <p>دليل المعلم العصري لبناء الجيل القرآني 1446هـ</p>
+    <h1>المنهج الشامل: علم النفس في خدمة القرآن</h1>
+    <p>دليل المعلم والمؤسسات التربوية لتطوير الأداء القرآني</p>
 </header>
 
 <div class="container">
 
     <section class="card">
-        <h2>🧠 علم النفس التربوي: ما وراء التلقين</h2>
-        <div class="grid">
-            <div class="feature-box">
-                <h3>🔍 علم النفس المعرفي</h3>
-                <p>فهم كيفية انتقال الحفظ من الذاكرة قصيرة المدى إلى الذاكرة الدائمة عبر تقنيات "الترميز الذهني".</p>
+        <span class="section-title">الوحدة التعليمية 01</span>
+        <h2>🧠 هندسة الذاكرة وآليات الحفظ الراسخ</h2>
+        <p>لماذا ينسى الطلاب؟ يكمن السر في كيفية "ترميز" المعلومة داخل الدماغ. نحن نهدف للانتقال من الحفظ الآلي الصم إلى الحفظ الواعي.</p>
+        
+        <div class="grid-container">
+            <div class="info-box">
+                <h3>1. الترميز الذهني</h3>
+                <p>ربط الآية بصورة ذهنية أو معنى حياتي يحولها من مجرد "صوت" إلى "مفهوم" يخزن في الذاكرة طويلة المدى.</p>
             </div>
-            <div class="feature-box">
-                <h3>📈 سيكولوجية الدافعية</h3>
-                <p>استبدال "الخوف من العقاب" بـ "شغف الإنجاز" من خلال نظام المكافآت المعنوية والمادية المدروس.</p>
+            <div class="info-box">
+                <h3>2. التكرار المتباعد</h3>
+                <p>بدلاً من تكرار الآية 50 مرة في ساعة واحدة، نقسمها على فترات متباعدة لتقوية الوصلات العصبية.</p>
             </div>
-            <div class="feature-box">
-                <h3>🧩 الفوارق الفردية</h3>
-                <p>تكييف المنهج ليناسب الطالب الموهوب، والمتوسط، ومن يواجه تحديات مثل "تشتت الانتباه".</p>
+            <div class="info-box">
+                <h3>3. استراتيجية الربط</h3>
+                <p>ربط نهاية الآية ببداية التي تليها من خلال قصة المعنى، مما يخلق تسلسلاً منطقياً في الدماغ.</p>
             </div>
         </div>
     </section>
 
-    <section class="card" style="border-top-color: #e67e22;">
-        <h2>❤️ الذكاء العاطفي والإرشاد النفسي</h2>
-        <p>البيئة الآمنة ترفع كفاءة التعلم بنسبة <strong>40%</strong>. إليك أهم مهارات المعلم:</p>
-        <ul>
-            <li><span class="badge">التعاطف</span> استشعار جهد الطالب ومشاركته تجربة تجاوز الصعوبات.</li>
-            <li><span class="badge">القيادة المرنة</span> إعطاء الطالب مساحة لاختيار السورة أو طريقة المراجعة.</li>
-            <li><span class="badge">إدارة القلق</span> معالجة "رهبة التسميع" عبر أسلوب المحاكاة الجماعية.</li>
-        </ul>
+    <section class="card">
+        <span class="section-title">الوحدة التعليمية 02</span>
+        <h2>a سيكولوجية الدافعية والأمان النفسي</h2>
+        <div class="stat-badge">زيادة كفاءة التعلم بنسبة 40%</div>
+        <p>المعلم ليس مجرد مصحح للأخطاء، بل هو مهندس للمناخ النفسي داخل الحلقة.</p>
+        
+        <div class="grid-container">
+            <div class="info-box">
+                <h3>بناء الثقة (الخروج من العزلة)</h3>
+                <ul class="pro-list">
+                    <li>تطبيق "المشاركة القيادية" لكسر حاجز الخوف.</li>
+                    <li>استخدام "نموذج الأقران" لتبسيط الصعوبات.</li>
+                    <li>الاحتفاء بالمحاولة وليس فقط بالإتقان التام.</li>
+                </ul>
+            </div>
+            <div class="info-box">
+                <h3>إدارة قلق الأداء</h3>
+                <ul class="pro-list">
+                    <li>تحويل الاختبارات إلى "جلسات مراجعة تعاونية".</li>
+                    <li>استخدام لغة جسد دافئة (الابتسام، القرب المكاني).</li>
+                    <li>تجنب التصحيح القاسي أمام الزملاء.</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <section class="card">
-        <h2>📚 استراتيجيات التعلم النشط</h2>
+        <span class="section-title">الوحدة التعليمية 03</span>
+        <h2>🧩 إدارة التنوع البشري في الحلقة</h2>
+        <p>كل طالب يتعلم بطريقة مختلفة (نموذج VARK). تطبيق هذا النموذج يضمن عدم ضياع أي موهبة.</p>
         <table>
             <thead>
                 <tr>
-                    <th>الاستراتيجية</th>
-                    <th>التطبيق في الحلقة</th>
-                    <th>الهدف التربوي</th>
+                    <th>نمط الطالب</th>
+                    <th>الوسيلة المقترحة</th>
+                    <th>الأثر التربوي</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>النظرية البنائية</td>
-                    <td>ربط معاني الآيات بواقع الطفل اليومي</td>
-                    <td>الحفظ القائم على الفهم</td>
+                    <td>البصري 👁️</td>
+                    <td>الخرائط الذهنية وتلوين المصحف</td>
+                    <td>سرعة استحضار الصفحة</td>
                 </tr>
                 <tr>
-                    <td>نموذج الأقران</td>
-                    <td>تسميع الطالب أمام زميله المتقن</td>
-                    <td>كسر حاجز الخوف الاجتماعي</td>
+                    <td>السمعي 👂</td>
+                    <td>الاستماع المتكرر والمحاكاة</td>
+                    <td>ضبط المخارج والتجويد</td>
                 </tr>
                 <tr>
-                    <td>تعدد الذكاءات</td>
-                    <td>استخدام الرسم، الصوت، والحركة</td>
-                    <td>مراعاة أنماط التعلم المختلفة</td>
+                    <td>الحركي 🏃</td>
+                    <td>الحركة أثناء الحفظ أو الكتابة</td>
+                    <td>تفريغ الطاقة وتثبيت الحفظ</td>
                 </tr>
             </tbody>
         </table>
     </section>
 
+    <section class="card" style="background: var(--bg-light); border: 2px dashed var(--secondary);">
+        <h2>💡 توصيات عملية فورية للمُعلم</h2>
+        <ul class="pro-list">
+            <li>ابدأ حلقتك دائماً بـ "دقيقتي تهيئة" (سؤال عن حال الطالب أو قصة قصيرة).</li>
+            <li>اجعل الطالب هو "المعلم" لزملائه في أجزاء أتقنها لرفع تقديره لذاته.</li>
+            <li>استخدم "التعزيز الفوري المخصص" (مثلاً: أحسنت نطق القلقلة اليوم!).</li>
+        </ul>
+    </section>
+    <section class="card" style="border-top-color: #9b59b6;">
+        <span class="section-title">الوحدة التعليمية 04</span>
+        <h2>🌟 صناعة النموذج الأخلاقي القرآني</h2>
+        <p>الهدف الأسمى ليس أن يحمل الطالب القرآن في صدره فحسب، بل أن يراه الناس في خلقه وسلوكه. إليك كيف نغرس ذلك نفسياً:</p>
+        
+        <div class="grid-container">
+            <div class="info-box">
+                <h3>1. استراتيجية "الربط السلوكي"</h3>
+                <p>بدلاً من الحفظ المجرد، نربط كل سورة بقيمة أخلاقية (مثل: سورة الحجرات بآداب التعامل). نطلب من الطالب رصد "تطبيق عملي" للآية في يومه.</p>
+            </div>
+            <div class="info-box">
+                <h3>2. المعلم كقدوة (التعلم بالملاحظة)</h3>
+                <p>تؤكد نظرية "باندورا" أن الطالب يحاكي أفعال المعلم أكثر من أقواله. هدوء المعلم، صدقه، ورحمته هي "المنهج الخفي" الذي يُدرس أخلاق القرآن.</p>
+            </div>
+            <div class="info-box">
+                <h3>3. بناء الهوية القرآنية</h3>
+                <p>تعزيز فكرة "أنا صاحب قرآن" لدى الطالب. هذا الشعور بالانتماء يخلق وازعاً داخلياً يمنعه من السلوكيات الخاطئة تقديراً للمكانة التي يحملها.</p>
+            </div>
+        </div>
+
+        <div class="highlight-box" style="background-color: #f4ecf7; padding: 20px; border-radius: 8px; margin-top: 20px;">
+            <strong>تمرين "أثر الآية":</strong> 
+            في نهاية كل أسبوع، لا نسأل "كم حفظت؟" بل نسأل: "ما هي الآية التي غيرت فيك خلقاً هذا الأسبوع؟". هذا السؤال يحول التركيز من الكمية إلى النوعية والأثر.
+        </div>
+    </section>
+        <section class="card" style="border-top-color: #e74c3c;">
+        <span class="section-title">الوحدة التعليمية 05</span>
+        <h2>🛠️ المعلم المبدع: الإدارة الذكية للتحديات</h2>
+        <p>ضيق الوقت وقلة الوسائل ليست عائقاً أمام "النموذج الأخلاقي"، بل هي فرصة لتعليم الطلاب الصبر والمرونة.</p>
+        
+        <div class="grid-container">
+            <div class="info-box">
+                <h3>1. استراتيجية "الدقائق الذهبية"</h3>
+                <p>إذا كان الوقت ضيقاً (بعد العشاء مثلاً)، استثمر أول 3 دقائق في "شحنة عاطفية" (ابتسامة، دعاء، تشجيع) وآخر دقيقتين في "توجيه قيمي". هذا يضمن بقاء الأثر النفسي حتى لو كان وقت الحفظ قصيراً.</p>
+            </div>
+            <div class="info-box">
+                <h3>2. البدائل الذكية للوسائل</h3>
+                <p>في غياب اللوحات الذكية أو الأجهزة، استخدم "الوسائل الحية". الطالب المتميز هو وسيلتك (نموذج الأقران)، والمحيط المسجدي هو وسيلتك (الهدوء، السكينة، احترام المكان).</p>
+            </div>
+            <div class="info-box">
+                <h3>3. إدارة الانفعالات (الهدوء الاستراتيجي)</h3>
+                <p>ضغط "قيّم المسجد" أو ضيق الوقت قد يولد توتراً. تذكر أن هدوءك في هذه اللحظات هو أقوى درس عملي في "أخلاق القرآن". الطالب يتعلم منك كيف تتعامل مع الضغط بصبر وحكمة.</p>
+            </div>
+        </div>
+
+        <div class="highlight-box" style="background-color: #fdf2f2; border-right-color: #e74c3c;">
+            <strong>نصيحة الميدان:</strong> 
+             اجعل من "إدارة المسجد" شريكاً لك بكلمة طيبة، ليعلم أنك تبني جيلاً يحترم النظام والوقت، مما قد يدفعها للتعاون معك بدلاً من التضييق.
+        </div>
+    </section>
+    
 </div>
 
 <footer>
-    <p>تم تطوير هذا الموقع لخدمة المعلمين والمؤسسات القرآنية</p>
-    <p><strong>"إِنَّ هَٰذَا الْقُرْآنَ يَهْدِي لِلَّتِي هِيَ أَقْوَمُ"</strong></p>
+    <p>تم تطوير المحتوى بناءً على أحدث دراسات علم النفس التربوي التطبيقي باستخدام أدوات الذكاء الاصطناعي</p>
+    <p><strong>"إِنَّ هَذَا الْقُرْآنَ يَهْدِي لِلَّتِي هِيَ أَقْوَمُ"</strong></p>
     <p><strong>Youcef BAOUNI Ai</strong></p>
 </footer>
 
 </body>
-    </html>
-    
+</html>
